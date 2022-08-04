@@ -1,0 +1,30 @@
+{
+  "name": "swift-guildedbot",
+  "version": "1.0.0",
+  "description": "A SwiFT Applications BOT through Guilded and Discord made by Revol",
+  "main": "index.js",
+  "types": "index.ts",
+  "dependencies": {
+    "@guildedjs/gil": "^0.2.17",
+    "@guildedjs/rest": "^2.8.4",
+    "@guildedjs/webhook-client": "^0.3.9",
+    "@guildedjs/ws": "^1.4.6",
+    "discord.js": "^14.1.2",
+    "guilded": "^1.2.3",
+    "guilded.js": "^0.13.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RevolGR/swift-guildedbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RevolGR/swift-guildedbot/issues"
+  },
+  "homepage": "https://github.com/RevolGR/swift-guildedbot#readme"
+}
