@@ -32,8 +32,8 @@ client.on("messageCreated", (message) => {
                 const lastmessage = channel.fetchMessage(messageId).then(lastmessage =>{
                 webhookplayers.send({
                     content: `Hey <@&443184664014880769> New application has been approved by an administrator \nVote here`,
-                    username: 'Guilded Application Form',
-                    avatarURL: 'https://cdn.survivetheark.com/uploads/monthly_2021_09/guilded.png.cee9a3c757428e4fd0faa6a3c3081294.png',
+                    username: 'Player Application',
+                    avatarURL: 'https://cdn.discordapp.com/attachments/452538620902113280/1004891817654894763/guilded_image_ee7cada8923d400e9be099bd3687dedf.png',
                     embeds: lastmessage.raw.embeds,
                 });
                     
@@ -66,8 +66,8 @@ const reactions = new ReactionCollector(client, {
             const lastmessage = channel.fetchMessage(messageId).then(lastmessage =>{
             webhookgfx.send({
                 content: `Hey <@&443185018756661248> New application has been approved by an administrator \nVote here`,
-                username: 'Guilded Application Form',
-                avatarURL: 'https://cdn.survivetheark.com/uploads/monthly_2021_09/guilded.png.cee9a3c757428e4fd0faa6a3c3081294.png',
+                username: 'Graphic Designer Application',
+                avatarURL: 'https://cdn.discordapp.com/attachments/452538620902113280/1004891817654894763/guilded_image_ee7cada8923d400e9be099bd3687dedf.png',
                 embeds: lastmessage.raw.embeds,
             });
                 
@@ -100,8 +100,8 @@ const reactions = new ReactionCollector(client, {
             const lastmessage = channel.fetchMessage(messageId).then(lastmessage =>{
             webhookvfx.send({
                 content: `Hey <@&443184989354590208> New application has been approved by an administrator \nVote here`,
-                username: 'Guilded Application Form',
-                avatarURL: 'https://cdn.survivetheark.com/uploads/monthly_2021_09/guilded.png.cee9a3c757428e4fd0faa6a3c3081294.png',
+                username: 'Video Editor Application',
+                avatarURL: 'https://cdn.discordapp.com/attachments/452538620902113280/1004891817654894763/guilded_image_ee7cada8923d400e9be099bd3687dedf.png',
                 embeds: lastmessage.raw.embeds,
             });
                 
@@ -134,8 +134,8 @@ const reactions = new ReactionCollector(client, {
             const lastmessage = channel.fetchMessage(messageId).then(lastmessage =>{
             webhooksfx.send({
                 content: `Hey <@&802997222831685653> New application has been approved by an administrator \nVote here`,
-                username: 'Guilded Application Form',
-                avatarURL: 'https://cdn.survivetheark.com/uploads/monthly_2021_09/guilded.png.cee9a3c757428e4fd0faa6a3c3081294.png',
+                username: 'Sound Designer Application',
+                avatarURL: 'https://cdn.discordapp.com/attachments/452538620902113280/1004891817654894763/guilded_image_ee7cada8923d400e9be099bd3687dedf.png',
                 embeds: lastmessage.raw.embeds,
             });
                 
@@ -168,8 +168,8 @@ const reactions = new ReactionCollector(client, {
             const lastmessage = channel.fetchMessage(messageId).then(lastmessage =>{
             webhookother.send({
                 content: `Hey @everyone New application has been approved by an administrator \nVote here`,
-                username: 'Guilded Application Form',
-                avatarURL: 'https://cdn.survivetheark.com/uploads/monthly_2021_09/guilded.png.cee9a3c757428e4fd0faa6a3c3081294.png',
+                username: 'Application',
+                avatarURL: 'https://cdn.discordapp.com/attachments/452538620902113280/1004891817654894763/guilded_image_ee7cada8923d400e9be099bd3687dedf.png',
                 embeds: lastmessage.raw.embeds,
             });
                 
