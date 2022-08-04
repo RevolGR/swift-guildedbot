@@ -11,6 +11,10 @@ const webhookother = new WebhookClient({id: process.env.webhookidsfx, token: pro
 client.on("ready", () => console.log("Bot is Working"));
 client.on("messageCreated", (message) => {
 
+    if (message.content === "bot.check") {
+        message.reply('Bot is working!');
+    }
+
     const messageId = message.id;
     const channel = new Channel(client,{ id: `c62f4b45-54ea-401a-9ead-6cda1dfb9c4d` });
 
