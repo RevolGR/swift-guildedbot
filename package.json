@@ -11,7 +11,9 @@
     "@guildedjs/ws": "^1.4.6",
     "discord.js": "^14.1.2",
     "guilded": "^1.2.3",
-    "guilded.js": "^0.13.9"
+    "guilded.js": "^0.13.9",
+    "next": "^12.2.3",
+    "next.js": "^1.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
