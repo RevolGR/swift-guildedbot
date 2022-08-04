@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/RevolGR/swift-guildedbot/issues"
   },
-  "homepage": "https://github.com/RevolGR/swift-guildedbot#readme"
+  "homepage": "https://github.com/RevolGR/swift-guildedbot#readme",
+  "devDependencies": {}
 }
