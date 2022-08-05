@@ -23,7 +23,7 @@ client.on("messageCreated", (message) => {
         message.addReaction(90001164).then(() => message.addReaction(90001170).then(async function (message) {
     
     const reactions = new ReactionCollector(client, {
-        max: 1,
+        max: 2,
         timeLimit: 50000,
         filter: (reaction) => {
             if(reaction.emote.name === "+1"){
@@ -57,7 +57,7 @@ if (message.content === "!bot.forwardgfx") {
     message.addReaction(90001164).then(() => message.addReaction(90001170).then(async function (message) {
 
 const reactions = new ReactionCollector(client, {
-    max: 1,
+    max: 2,
     timeLimit: 50000,
     filter: (reaction) => {
         if(reaction.emote.name === "+1"){
@@ -91,7 +91,7 @@ if (message.content === "!bot.forwardvfx") {
     message.addReaction(90001164).then(() => message.addReaction(90001170).then(async function (message) {
 
 const reactions = new ReactionCollector(client, {
-    max: 1,
+    max: 2,
     timeLimit: 50000,
     filter: (reaction) => {
         if(reaction.emote.name === "+1"){
@@ -125,7 +125,7 @@ if (message.content === "!bot.forwardsfx") {
     message.addReaction(90001164).then(() => message.addReaction(90001170).then(async function (message) {
 
 const reactions = new ReactionCollector(client, {
-    max: 1,
+    max: 2,
     timeLimit: 50000,
     filter: (reaction) => {
         if(reaction.emote.name === "+1"){
@@ -159,7 +159,7 @@ if (message.content === "!bot.forwardother") {
     message.addReaction(90001164).then(() => message.addReaction(90001170).then(async function (message) {
 
 const reactions = new ReactionCollector(client, {
-    max: 1,
+    max: 2,
     timeLimit: 50000,
     filter: (reaction) => {
         if(reaction.emote.name === "+1"){
