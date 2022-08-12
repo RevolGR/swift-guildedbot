@@ -1,140 +1,3991 @@
-@font-face {
-    font-family: 'Arame';
-    src: url('/fonts/Arame.ttf')  format('truetype'); /* IE9 Compat Modes */
+.mediaViewInfo {
+	--web-view-name: Website;
+	--web-view-id: Website;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+	--web-page-font: arame, regular;
 }
-@font-face {
-    font-family: 'ArameBold';
-    src: url('/fonts/Arame-Bold.ttf')  format('truetype'); /* IE9 Compat Modes */
+:root {
+	--web-view-ids: Website;
 }
-body {
-    font-family: 'Arame', 'ArameBold' !important;
-    background-image: url('/img/bimg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-b {
-    color:white;
-}
-c {
-    color:#b3ff00;
-}
+html,body{
+    scroll-behavior: smooth;
 
-/* Color of the links BEFORE scroll */
-.navbar-scroll .nav-link,
-.navbar-scroll .navbar-toggler-icon,
-.navbar-scroll .navbar-brand {
-  color: #ffffff;
+        width: 100%;
+        height: 100%;
+        margin:0px;
+        padding: 0px;
+        overflow-x:hidden;
 }
-
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 70px;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
 }
-.nav-link {
-    font-size: 15px;
+.Website_Class {
+	position: absolute;
+	width: 1366px;
+	height: 3700px;
+	font-family: arame, regular;
+	background-color: rgba(222,248,0,1);
+	overflow: hidden;
+	--web-view-name: Website;
+	--web-view-id: Website;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-center-vertically: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+	--web-page-font: arame, regular;
 }
-/* Color of the navbar BEFORE scroll */
-.navbar-scroll {
-  background-image: url('/img/bnavbar.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+.UI_Class {
+	position: absolute;
+	width: 5457.174px;
+	height: 3851.257px;
+	left: -808.58px;
+	top: 0px;
+	overflow: visible;
 }
-.bbl{
-    border-bottom: 1px solid white;
-    max-width:1920px;
+.Bg_Class {
+	position: absolute;
+	width: 5457.174px;
+	height: 3851.257px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
 }
-
-.logo{
-    width: 30px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: auto;
+.Color_Fill_1_Class {
+	fill: rgba(5,6,7,1);
 }
-.progress-container {
-    position: fixed;
-    top: 70px; /* Adjust to desired height */
-    width: 100%;
-    background: transparent;
-  }
-  
-  /* The progress bar (scroll indicator) */
-  .progress-bar {
-    height: 8px;
-    background: #b3ff00;
-    width: 0%;
-  }
-/* Color of the links AFTER scroll */
-.navbar-scrolled .nav-link,
-.navbar-scrolled .navbar-toggler-icon,
-.navbar-scroll {
-  color: white;
+.Color_Fill_1 {
+	position: absolute;
+	overflow: visible;
+	width: 1366px;
+	height: 2780px;
+	left: 808.58px;
+	top: 0px;
 }
-
-/* Color of the navbar AFTER scroll */
-.navbar-scrolled {
-  background-image: url('/img/bnavbar.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 9999;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+.Layer_4_Class {
+	opacity: 0.051;
+	fill: rgba(255,255,255,1);
 }
-
-/* An optional height of the navbar AFTER scroll */
-.navbar.navbar-scroll.navbar-scrolled {
-  padding-top: auto;
-  padding-bottom: auto;
+.Layer_4 {
+	mix-blend-mode: luminosity;
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 1080px;
+	left: 808.58px;
+	top: 0px;
 }
-.navbar-brand {
-  font-size: unset;
-  height: 3.5rem;
+.Layer_6_Class {
+	opacity: 0.051;
+	fill: rgba(255,255,255,1);
 }
-
-/* Preloader */
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    z-index: 9999999; }
-  
-  .loader {
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    position: relative;
-    margin: 0 auto; }
-  
-  #loader-1:before, #loader-1:after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    border: 7px solid transparent;
-    border-top-color: #92e000; }
-  
-  #loader-1:before {
-    z-index: 100;
-    animation: spin 2s infinite; }
-  
-  #loader-1:after {
-    border: 7px solid #fafafa; }
-  
-  @keyframes spin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg); }
-    100% {
-      -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg); } }
+.Layer_6 {
+	mix-blend-mode: luminosity;
+	position: absolute;
+	overflow: visible;
+	width: 2724px;
+	height: 1464px;
+	left: 127.58px;
+	top: 1316px;
+}
+.Shape_1_copy_Class {
+	opacity: 0.251;
+	fill: rgba(0,0,0,0);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: square;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Shape_1_copy {
+	overflow: visible;
+	position: absolute;
+	width: 2589.623px;
+	height: 839.582px;
+	left: 641.766px;
+	top: 248.696px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_2_Class {
+	position: absolute;
+	width: 5457.174px;
+	height: 1769.272px;
+	left: 0px;
+	top: 719.999px;
+	overflow: visible;
+}
+.Shape_1_copy_3_Class {
+	position: absolute;
+	width: 5457.174px;
+	height: 1769.272px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Shape_1_copy_3_o_Class {
+	fill: rgba(175,196,0,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: square;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Shape_1_copy_3_o {
+	overflow: visible;
+	position: absolute;
+	width: 5457.174px;
+	height: 1769.272px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Clip_Class {
+	mix-blend-mode: overlay;
+	position: absolute;
+	width: 5457.174px;
+	height: 1769.272px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_2_q_Class {
+	position: absolute;
+	width: 2293px;
+	height: 743.414px;
+	left: 990.58px;
+	top: 3107.843px;
+	overflow: visible;
+}
+.Shape_1_copy_3_r_Class {
+	position: absolute;
+	width: 2293px;
+	height: 743.414px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Shape_1_copy_3_s_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: square;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Shape_1_copy_3_s {
+	overflow: visible;
+	position: absolute;
+	width: 2293px;
+	height: 743.414px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Clip_t_Class {
+	mix-blend-mode: overlay;
+	position: absolute;
+	width: 2293px;
+	height: 743.414px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Home_page_Class {
+	position: absolute;
+	width: 1089px;
+	height: 573.702px;
+	left: 138px;
+	top: 147.998px;
+	overflow: visible;
+}
+.Social_1_YT_Changes_with_every_Class {
+	opacity: 0.29;
+	position: absolute;
+	width: 444.115px;
+	height: 246.391px;
+	left: 644.885px;
+	top: 290.006px;
+	overflow: visible;
+}
+.Rectangle_1_Class {
+	position: absolute;
+	width: 444.115px;
+	height: 246.391px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_1_x_Class {
+	fill: rgba(11,13,15,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Rectangle_1_x {
+	position: absolute;
+	overflow: visible;
+	width: 444.115px;
+	height: 246.391px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_y_Class {
+	position: absolute;
+	width: 444.115px;
+	height: 246.391px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Social_1_YT_Changes_with_every_z_Class {
+	opacity: 0.29;
+	position: absolute;
+	width: 444.115px;
+	height: 246.391px;
+	left: 10.928px;
+	top: 290.006px;
+	overflow: visible;
+}
+.Rectangle_1__Class {
+	position: absolute;
+	width: 444.115px;
+	height: 246.391px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_1_ba_Class {
+	fill: rgba(11,13,15,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Rectangle_1_ba {
+	position: absolute;
+	overflow: visible;
+	width: 444.115px;
+	height: 246.391px;
+	left: 0px;
+	top: 0px;
+}
+.Clip__Class {
+	position: absolute;
+	width: 444.115px;
+	height: 246.391px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Social_1_YT_Changes_with_every__Class {
+	position: absolute;
+	width: 578.596px;
+	height: 321px;
+	left: 256.552px;
+	top: 252.702px;
+	overflow: visible;
+}
+.Rectangle_1_bb_Class {
+	position: absolute;
+	width: 578.596px;
+	height: 321px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_1_bc_Class {
+	fill: rgba(11,13,15,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Rectangle_1_bc {
+	position: absolute;
+	overflow: visible;
+	width: 578.596px;
+	height: 321px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ba_Class {
+	position: absolute;
+	width: 578.596px;
+	height: 321px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Team_SwiFT_Class {
+	position: absolute;
+	width: 231.985px;
+	height: 46.002px;
+	left: 1px;
+	top: 0px;
+	overflow: visible;
+}
+.SwiFT_Logo_copy_Class {
+	position: absolute;
+	width: 56px;
+	height: 46.002px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.SwiFT_Logo_copy__Class {
+	transform: translate(0px, 0px) matrix(1,0,0,1,0.0001,0) rotate(0deg);
+	transform-origin: center;
+	position: absolute;
+	width: 55.102px;
+	height: 45.919px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_12_Class {
+	position: absolute;
+	width: 55.102px;
+	height: 45.919px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_58_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_58 {
+	overflow: visible;
+	position: absolute;
+	width: 13.919px;
+	height: 9.806px;
+	left: 12.066px;
+	top: 5.577px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_59_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_59 {
+	overflow: visible;
+	position: absolute;
+	width: 8.67px;
+	height: 12.577px;
+	left: 4.808px;
+	top: 24.189px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_60_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_60 {
+	overflow: visible;
+	position: absolute;
+	width: 9.219px;
+	height: 8.429px;
+	left: 22.942px;
+	top: 6.428px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_61_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_61 {
+	overflow: visible;
+	position: absolute;
+	width: 43.995px;
+	height: 17.175px;
+	left: 5.554px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_62_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_62 {
+	overflow: visible;
+	position: absolute;
+	width: 34.492px;
+	height: 16.696px;
+	left: 10.305px;
+	top: 24.014px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_63_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_63 {
+	overflow: visible;
+	position: absolute;
+	width: 13.919px;
+	height: 9.806px;
+	left: 29.118px;
+	top: 5.577px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_64_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_64 {
+	overflow: visible;
+	position: absolute;
+	width: 8.67px;
+	height: 12.577px;
+	left: 41.624px;
+	top: 24.189px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_65_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_65 {
+	overflow: visible;
+	position: absolute;
+	width: 55.102px;
+	height: 17.835px;
+	left: 0px;
+	top: 14.871px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_66_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_66 {
+	overflow: visible;
+	position: absolute;
+	width: 9.049px;
+	height: 3.678px;
+	left: 23.027px;
+	top: 33.04px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_67_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_67 {
+	overflow: visible;
+	position: absolute;
+	width: 33.277px;
+	height: 8.126px;
+	left: 10.912px;
+	top: 37.792px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Color_Overlay_Class {
+	fill: rgba(255,255,255,1);
+}
+.Color_Overlay {
+	overflow: visible;
+	position: absolute;
+	width: 56px;
+	height: 46px;
+	left: 0px;
+	top: 0.002px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Team_SwiFT_bm_Class {
+	left: 70.985px;
+	top: 2.786px;
+	position: absolute;
+	overflow: visible;
+	width: 162px;
+	white-space: nowrap;
+	line-height: 26px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.hashtagswift2_Class {
+	transform: translate(-136px, -138.039px) matrix(1,0,0,1,211.4355,168.2052) rotate(0deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 77px;
+	white-space: nowrap;
+	line-height: 10px;
+	margin-top: -0.5px;
+	text-align: center;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 9px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Group_21_Class {
+	position: absolute;
+	width: 645px;
+	height: 156px;
+	left: 0px;
+	top: 36.002px;
+	overflow: visible;
+}
+.WELCOME_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 646px;
+	white-space: nowrap;
+	line-height: 176px;
+	margin-top: -28px;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 120px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 1.5px;
+}
+.TO_SWIFT_Class {
+	left: 5px;
+	top: 125px;
+	position: absolute;
+	overflow: visible;
+	width: 136px;
+	white-space: nowrap;
+	line-height: 175.9748077392578px;
+	margin-top: -75.4874038696289px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 1.5px;
+}
+.Roster_Class {
+	position: absolute;
+	width: 989.73px;
+	height: 555.446px;
+	left: 127.479px;
+	top: 1495.067px;
+	overflow: visible;
+}
+.pics_and_roles_Class {
+	position: absolute;
+	width: 989.73px;
+	height: 555.446px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Scroll_Group_1_Class {
+	mix-blend-mode: normal;
+	position: absolute;
+	width: 989.73px;
+	height: 383.039px;
+	left: 0px;
+	top: 172.406px;
+	overflow: hidden;
+}
+.Group_3_Class {
+	position: absolute;
+	width: 977.73px;
+	height: 383.039px;
+	left: 12px;
+	top: 0px;
+	overflow: hidden;
+}
+.Group_3_bv_Class {
+	position: absolute;
+	width: 976.73px;
+	height: 350.039px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.ID1_revol_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.382px;
+	left: 0.159px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID1_revol_bx_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_bz_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_bz {
+	position: absolute;
+	overflow: visible;
+	width: 113.237px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_b_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Revol_Leader_Class {
+	left: 25.427px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 63px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID2_merch_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 214.697px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID2_merch_b_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_b_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_b {
+	position: absolute;
+	overflow: visible;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ca_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.merch_Leader_Class {
+	left: 25.344px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 63px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID3_emmure_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 428.082px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID3_emmure_b_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_2_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_2_cb_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_2_cb {
+	position: absolute;
+	overflow: visible;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_cc_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.emmure_Leader_Class {
+	left: 24.076px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 67px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID4_rw_Class {
+	position: absolute;
+	width: 114.059px;
+	height: 149.535px;
+	left: 645.135px;
+	top: 0px;
+	overflow: visible;
+}
+.ID4_rw_cf_Class {
+	position: absolute;
+	width: 114.059px;
+	height: 149.535px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_3_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.667px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_3_ch_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_3_ch {
+	position: absolute;
+	overflow: visible;
+	width: 113.05px;
+	height: 111.667px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ci_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.667px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.rwynd_Lead_player_Class {
+	left: 0.059px;
+	top: 119.535px;
+	position: absolute;
+	overflow: visible;
+	width: 115px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID5_slojder_Class {
+	position: absolute;
+	width: 114.055px;
+	height: 149.382px;
+	left: 862.674px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID5_slojder_cl_Class {
+	position: absolute;
+	width: 114.055px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_4_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_4_cn_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_4_cn {
+	position: absolute;
+	overflow: visible;
+	width: 113.05px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_co_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.slojder_Lead_player_Class {
+	left: 0.055px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 115px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID6_ronzi_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 0px;
+	top: 184.072px;
+	overflow: visible;
+}
+.ID6_ronzi_cr_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_ct_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_ct {
+	position: absolute;
+	overflow: visible;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_cu_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ronzi_Lead_design_Class {
+	left: 1.505px;
+	top: 119.23px;
+	position: absolute;
+	overflow: visible;
+	width: 111px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID7_sean_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 216.538px;
+	top: 184.072px;
+	overflow: visible;
+}
+.ID7_sean_cx_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_cy_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_cz_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_cz {
+	position: absolute;
+	overflow: visible;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_c_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.sean_Lead_design_Class {
+	left: 1.501px;
+	top: 119.23px;
+	position: absolute;
+	overflow: visible;
+	width: 111px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID8_xereosi_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.23px;
+	left: 432.083px;
+	top: 184.072px;
+	overflow: visible;
+}
+.ID8_xereosi_c_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_c_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_da_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_da {
+	position: absolute;
+	overflow: visible;
+	width: 113.237px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_da_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.xereosi_Lead_editor_Class {
+	left: 2.157px;
+	top: 119.23px;
+	position: absolute;
+	overflow: visible;
+	width: 111px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID9_prisma_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 165.96px;
+	left: 647.621px;
+	top: 184.079px;
+	overflow: visible;
+}
+.ID9_prisma_c_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 165.96px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_db_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 112.876px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_dc_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_dc {
+	position: absolute;
+	overflow: visible;
+	width: 113.078px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_dc_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.prisma_Lead_sound_designer_Class {
+	left: 5.073px;
+	top: 120.96px;
+	position: absolute;
+	overflow: visible;
+	width: 105px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID10_kinch_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 165.96px;
+	left: 862.999px;
+	top: 184.079px;
+	overflow: visible;
+}
+.ID10_kinch_df_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 165.96px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_dg_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 112.876px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_dh_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_dh {
+	position: absolute;
+	overflow: visible;
+	width: 113.237px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_di_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.kinch_Lead_motion_design_Class {
+	left: 1.15px;
+	top: 120.96px;
+	position: absolute;
+	overflow: visible;
+	width: 113px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.Group_3_dk_Class {
+	position: absolute;
+	width: 976.73px;
+	height: 350.039px;
+	left: 0px;
+	top: 371px;
+	overflow: visible;
+}
+.ID1_revol_dl_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.382px;
+	left: 0.159px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID1_revol_dm_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_dn_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_do_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_do {
+	position: absolute;
+	overflow: visible;
+	width: 113.237px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_dp_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Revol_Leader_dq_Class {
+	left: 25.427px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 63px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID2_merch_dr_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 214.697px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID2_merch_ds_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_dt_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_du_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_du {
+	position: absolute;
+	overflow: visible;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_dv_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.merch_Leader_dw_Class {
+	left: 25.344px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 63px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID3_emmure_dx_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 428.082px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID3_emmure_dy_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_2_dz_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_2_d_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_2_d {
+	position: absolute;
+	overflow: visible;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_d_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.emmure_Leader_d_Class {
+	left: 24.076px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 67px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID4_rw_d_Class {
+	position: absolute;
+	width: 114.059px;
+	height: 149.535px;
+	left: 645.135px;
+	top: 0px;
+	overflow: visible;
+}
+.ID4_rw_ea_Class {
+	position: absolute;
+	width: 114.059px;
+	height: 149.535px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_3_d_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.667px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_3_ea_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_3_ea {
+	position: absolute;
+	overflow: visible;
+	width: 113.05px;
+	height: 111.667px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ea_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.667px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.rwynd_Lead_player_d_Class {
+	left: 0.059px;
+	top: 119.535px;
+	position: absolute;
+	overflow: visible;
+	width: 115px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID5_slojder_d_Class {
+	position: absolute;
+	width: 114.055px;
+	height: 149.382px;
+	left: 862.674px;
+	top: 0.172px;
+	overflow: visible;
+}
+.ID5_slojder_ea_Class {
+	position: absolute;
+	width: 114.055px;
+	height: 149.382px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_4_eb_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_4_ec_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_4_ec {
+	position: absolute;
+	overflow: visible;
+	width: 113.05px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ed_Class {
+	position: absolute;
+	width: 113.05px;
+	height: 111.537px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.slojder_Lead_player_ee_Class {
+	left: 0.055px;
+	top: 119.382px;
+	position: absolute;
+	overflow: visible;
+	width: 115px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID6_ronzi_ef_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 0px;
+	top: 184.072px;
+	overflow: visible;
+}
+.ID6_ronzi_eg_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_eh_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_ei_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_ei {
+	position: absolute;
+	overflow: visible;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ej_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ronzi_Lead_design_ek_Class {
+	left: 1.505px;
+	top: 119.23px;
+	position: absolute;
+	overflow: visible;
+	width: 111px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID7_sean_el_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 216.538px;
+	top: 184.072px;
+	overflow: visible;
+}
+.ID7_sean_em_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 149.23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_en_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_eo_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_eo {
+	position: absolute;
+	overflow: visible;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ep_Class {
+	position: absolute;
+	width: 113.394px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.sean_Lead_design_eq_Class {
+	left: 1.501px;
+	top: 119.23px;
+	position: absolute;
+	overflow: visible;
+	width: 111px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID8_xereosi_er_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.23px;
+	left: 432.083px;
+	top: 184.072px;
+	overflow: visible;
+}
+.ID8_xereosi_es_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 149.23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_et_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_eu_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_eu {
+	position: absolute;
+	overflow: visible;
+	width: 113.237px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_ev_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 111.406px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.xereosi_Lead_editor_ew_Class {
+	left: 2.157px;
+	top: 119.23px;
+	position: absolute;
+	overflow: visible;
+	width: 111px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID9_prisma_ex_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 165.96px;
+	left: 647.621px;
+	top: 184.079px;
+	overflow: visible;
+}
+.ID9_prisma_ey_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 165.96px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_ez_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 112.876px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_e_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_e {
+	position: absolute;
+	overflow: visible;
+	width: 113.078px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_e_Class {
+	position: absolute;
+	width: 113.078px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.prisma_Lead_sound_designer_e_Class {
+	left: 5.073px;
+	top: 120.96px;
+	position: absolute;
+	overflow: visible;
+	width: 105px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.ID10_kinch_e_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 165.96px;
+	left: 862.999px;
+	top: 184.079px;
+	overflow: visible;
+}
+.ID10_kinch_fa_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 165.96px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_fa_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 112.876px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_2_copy_5_fb_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Ellipse_2_copy_5_fb {
+	position: absolute;
+	overflow: visible;
+	width: 113.237px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+}
+.Clip_fa_Class {
+	position: absolute;
+	width: 113.237px;
+	height: 112.875px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.kinch_Lead_motion_design_e_Class {
+	left: 1.15px;
+	top: 120.96px;
+	position: absolute;
+	overflow: visible;
+	width: 113px;
+	white-space: nowrap;
+	line-height: 15px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 3.2px;
+}
+.Roster_area_text_Class {
+	left: 11.866px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 847px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 67.48677825927734px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 3.2px;
+}
+.Group_4_Class {
+	position: absolute;
+	width: 211.438px;
+	height: 23px;
+	left: 1117px;
+	top: 2723px;
+	overflow: visible;
+}
+.Sign_Class {
+	position: absolute;
+	width: 211.438px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Sign_fc_Class {
+	position: absolute;
+	width: 211.438px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.SwiFT_Logo_copy_2_Class {
+	position: absolute;
+	width: 27px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_20_Class {
+	position: absolute;
+	width: 27px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_138_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_138 {
+	overflow: visible;
+	position: absolute;
+	width: 6.82px;
+	height: 4.912px;
+	left: 5.912px;
+	top: 2.794px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_139_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_139 {
+	overflow: visible;
+	position: absolute;
+	width: 4.248px;
+	height: 6.3px;
+	left: 2.356px;
+	top: 12.116px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_140_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_140 {
+	overflow: visible;
+	position: absolute;
+	width: 4.517px;
+	height: 4.222px;
+	left: 11.241px;
+	top: 3.22px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_141_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_141 {
+	overflow: visible;
+	position: absolute;
+	width: 21.557px;
+	height: 8.603px;
+	left: 2.721px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_142_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_142 {
+	overflow: visible;
+	position: absolute;
+	width: 16.901px;
+	height: 8.363px;
+	left: 5.05px;
+	top: 12.028px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_143_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_143 {
+	overflow: visible;
+	position: absolute;
+	width: 6.82px;
+	height: 4.912px;
+	left: 14.268px;
+	top: 2.794px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_144_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_144 {
+	overflow: visible;
+	position: absolute;
+	width: 4.248px;
+	height: 6.3px;
+	left: 20.396px;
+	top: 12.116px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_145_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_145 {
+	overflow: visible;
+	position: absolute;
+	width: 27px;
+	height: 8.933px;
+	left: 0px;
+	top: 7.449px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_146_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_146 {
+	overflow: visible;
+	position: absolute;
+	width: 4.434px;
+	height: 1.842px;
+	left: 11.283px;
+	top: 16.55px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_147_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_147 {
+	overflow: visible;
+	position: absolute;
+	width: 16.306px;
+	height: 4.07px;
+	left: 5.347px;
+	top: 18.93px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.TEAM_sWIfT_EST_2017_Class {
+	left: 37.438px;
+	top: 0.703px;
+	position: absolute;
+	overflow: visible;
+	width: 175px;
+	white-space: nowrap;
+	line-height: 19.220972061157227px;
+	margin-top: -1.0446157455444336px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17.13174057006836px;
+	color: rgba(36,36,36,1);
+	letter-spacing: -0.25px;
+}
+.Panels_Class {
+	position: absolute;
+	width: 1366px;
+	height: 85px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Top_Menu_Class {
+	position: absolute;
+	width: 1366px;
+	height: 85px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Top_Menu_fs_Class {
+	position: absolute;
+	width: 1366px;
+	height: 85px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_1_copy_fu_Class {
+	fill: url(#Rectangle_1_copy_fu);
+	stroke: rgba(0,0,0,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Rectangle_1_copy_fu {
+	position: absolute;
+	overflow: visible;
+	width: 1366px;
+	height: 85px;
+	left: 0px;
+	top: 0px;
+}
+.SwiFT_Logo_Class {
+	position: absolute;
+	width: 27.305px;
+	height: 22.794px;
+	left: 139px;
+	top: 31.103px;
+	overflow: visible;
+}
+.SwiFT_Logo_fw_Class {
+	transform: translate(-28.202px, -31.103px) matrix(1,0,0,1,28.202,31.1032) rotate(0deg);
+	transform-origin: center;
+	position: absolute;
+	width: 27.305px;
+	height: 22.794px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_5_Class {
+	position: absolute;
+	width: 27.305px;
+	height: 22.794px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_1_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_1 {
+	overflow: visible;
+	position: absolute;
+	width: 6.897px;
+	height: 4.868px;
+	left: 5.979px;
+	top: 2.769px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_2_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_2 {
+	overflow: visible;
+	position: absolute;
+	width: 4.296px;
+	height: 6.243px;
+	left: 2.383px;
+	top: 12.007px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_3_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_3 {
+	overflow: visible;
+	position: absolute;
+	width: 4.568px;
+	height: 4.184px;
+	left: 11.368px;
+	top: 3.191px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_4_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_4 {
+	overflow: visible;
+	position: absolute;
+	width: 21.801px;
+	height: 8.526px;
+	left: 2.752px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_5_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_5 {
+	overflow: visible;
+	position: absolute;
+	width: 17.092px;
+	height: 8.288px;
+	left: 5.107px;
+	top: 11.92px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_6_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_6 {
+	overflow: visible;
+	position: absolute;
+	width: 6.897px;
+	height: 4.868px;
+	left: 14.429px;
+	top: 2.769px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_7_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_7 {
+	overflow: visible;
+	position: absolute;
+	width: 4.296px;
+	height: 6.243px;
+	left: 20.626px;
+	top: 12.007px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_8_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_8 {
+	overflow: visible;
+	position: absolute;
+	width: 27.305px;
+	height: 8.853px;
+	left: 0px;
+	top: 7.382px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_9_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_9 {
+	overflow: visible;
+	position: absolute;
+	width: 4.484px;
+	height: 1.825px;
+	left: 11.41px;
+	top: 16.401px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_10_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_10 {
+	overflow: visible;
+	position: absolute;
+	width: 16.49px;
+	height: 4.034px;
+	left: 5.407px;
+	top: 18.76px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Color_Overlay_f_Class {
+	fill: rgba(222,248,0,1);
+}
+.Color_Overlay_f {
+	overflow: visible;
+	position: absolute;
+	width: 27.305px;
+	height: 22.793px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Web_Title_Class {
+	left: 186.32px;
+	top: 31.703px;
+	position: absolute;
+	overflow: visible;
+	width: 151px;
+	white-space: nowrap;
+	line-height: 19.263986587524414px;
+	margin-top: -1.0469579696655273px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17.17007064819336px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Clip_ga_Class {
+	position: absolute;
+	width: 1366px;
+	height: 85px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Component_1__1_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 735.071px;
+	top: 34.723px;
+	overflow: visible;
+}
+.Component_5__1_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Component_6__1_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Home_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_2__1_Class {
+	position: absolute;
+	width: 49px;
+	height: 17px;
+	left: 845.071px;
+	top: 34.723px;
+	overflow: visible;
+}
+.Component_22__1_Class {
+	position: absolute;
+	width: 49px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.About_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 50px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_15__1_Class {
+	position: absolute;
+	width: 59px;
+	height: 17px;
+	left: 964.071px;
+	top: 34.723px;
+	overflow: visible;
+}
+.Roster_gj_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 60px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_11__1_Class {
+	position: absolute;
+	width: 111px;
+	height: 17px;
+	left: 1093.071px;
+	top: 34.723px;
+	overflow: visible;
+}
+.Applications_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_11__2_Class {
+	position: absolute;
+	width: 28px;
+	height: 17px;
+	left: 1274.071px;
+	top: 34.723px;
+	overflow: visible;
+}
+.faq_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 29px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Polygon_1_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Polygon_1 {
+	overflow: visible;
+	position: absolute;
+	width: 42.101px;
+	height: 36.206px;
+	transform: matrix(1,0,0,1,351.2557,535.8681) rotate(30deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.Polygon_2_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Polygon_2 {
+	overflow: visible;
+	position: absolute;
+	width: 42.101px;
+	height: 36.206px;
+	transform: matrix(1,0,0,1,973.6437,549.3924) rotate(210deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.Group_23_Class {
+	position: absolute;
+	width: 642px;
+	height: 363px;
+	left: 139px;
+	top: 2861px;
+	overflow: visible;
+}
+.Frequently_asked_questions_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 643px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 45px;
+	color: rgba(36,36,36,1);
+	letter-spacing: -0.25px;
+}
+.IS_MERCH_SEXY_NO_MAYBE_COULD_B_Class {
+	left: 0px;
+	top: 77px;
+	position: absolute;
+	overflow: visible;
+	width: 250px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 33px;
+	color: rgba(36,36,36,1);
+	letter-spacing: -0.25px;
+}
+.IS_REVOL_SEXY_WHY_Class {
+	left: 0px;
+	top: 150px;
+	position: absolute;
+	overflow: visible;
+	width: 247px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 33px;
+	color: rgba(36,36,36,1);
+	letter-spacing: -0.25px;
+}
+.SLIDESHOW_YES_Class {
+	left: 0px;
+	top: 222px;
+	position: absolute;
+	overflow: visible;
+	width: 186px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 33px;
+	color: rgba(36,36,36,1);
+	letter-spacing: -0.25px;
+}
+.standards_high_af_Class {
+	left: 0px;
+	top: 300px;
+	position: absolute;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 33px;
+	color: rgba(36,36,36,1);
+	letter-spacing: -0.25px;
+}
+.Applications_gw_Class {
+	position: absolute;
+	width: 1018px;
+	height: 375.032px;
+	left: 140px;
+	top: 2155.31px;
+	overflow: visible;
+}
+.Group_22_Class {
+	position: absolute;
+	width: 459.269px;
+	height: 307.789px;
+	left: 0px;
+	top: 12.69px;
+	overflow: visible;
+}
+.Role_Class {
+	position: absolute;
+	width: 179.384px;
+	height: 56.339px;
+	left: 0.27px;
+	top: 251.449px;
+	overflow: visible;
+}
+.Apply_as__Player_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 163px;
+	white-space: nowrap;
+	line-height: 31px;
+	margin-top: -7px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.arrow_up_Class {
+	transform: translate(633.087px, -240px) matrix(1,0,0,1,-463.7033,274.3393) rotate(180deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 11px;
+	white-space: nowrap;
+	line-height: 42px;
+	margin-top: -12px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Form_Class {
+	position: absolute;
+	width: 459px;
+	height: 90px;
+	left: 0.269px;
+	top: 76.212px;
+	overflow: visible;
+}
+.Text_to_join_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 460px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.WANT_TO_JOIN_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 444px;
+	white-space: nowrap;
+	line-height: 118px;
+	margin-top: -34.5px;
+	text-align: left;
+	font-family: Arame-Bold, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 49px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 1.5px;
+}
+.Group_32_Class {
+	position: absolute;
+	width: 467px;
+	height: 375.032px;
+	left: 551px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_3_Class {
+	filter: blur(5px);
+	fill: rgba(0,0,0,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 100;
+	shape-rendering: auto;
+}
+.Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	width: 467px;
+	height: 375.032px;
+	left: 0px;
+	top: 0px;
+}
+.Team_SwiFT_copy_2_Class {
+	position: absolute;
+	width: 183.988px;
+	height: 45px;
+	left: 23.53px;
+	top: 23.69px;
+	overflow: visible;
+}
+.Rectangle_3_g_Class {
+	fill: rgba(222,248,0,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_3_g {
+	position: absolute;
+	overflow: visible;
+	width: 45px;
+	height: 45px;
+	left: 0px;
+	top: 0px;
+}
+.SwiFT_Logo_copy_g_Class {
+	position: absolute;
+	width: 40.767px;
+	height: 34.023px;
+	left: 2px;
+	top: 6px;
+	overflow: visible;
+}
+.SwiFT_Logo_copy_ha_Class {
+	transform: translate(0.395px, 0.38px) matrix(1,0,0,1,0,0.0005) rotate(0deg);
+	transform-origin: center;
+	position: absolute;
+	width: 40.372px;
+	height: 33.643px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_18_Class {
+	position: absolute;
+	width: 40.372px;
+	height: 33.643px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_118_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_118 {
+	overflow: visible;
+	position: absolute;
+	width: 10.198px;
+	height: 7.185px;
+	left: 8.84px;
+	top: 4.086px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_119_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_119 {
+	overflow: visible;
+	position: absolute;
+	width: 6.353px;
+	height: 9.215px;
+	left: 3.523px;
+	top: 17.722px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_120_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_120 {
+	overflow: visible;
+	position: absolute;
+	width: 6.754px;
+	height: 6.176px;
+	left: 16.809px;
+	top: 4.71px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_121_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_121 {
+	overflow: visible;
+	position: absolute;
+	width: 32.233px;
+	height: 12.584px;
+	left: 4.069px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_122_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_122 {
+	overflow: visible;
+	position: absolute;
+	width: 25.271px;
+	height: 12.233px;
+	left: 7.55px;
+	top: 17.594px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_123_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_123 {
+	overflow: visible;
+	position: absolute;
+	width: 10.198px;
+	height: 7.185px;
+	left: 21.334px;
+	top: 4.086px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_124_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_124 {
+	overflow: visible;
+	position: absolute;
+	width: 6.353px;
+	height: 9.215px;
+	left: 30.496px;
+	top: 17.722px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_125_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_125 {
+	overflow: visible;
+	position: absolute;
+	width: 40.372px;
+	height: 13.067px;
+	left: 0px;
+	top: 10.895px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_126_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_126 {
+	overflow: visible;
+	position: absolute;
+	width: 6.63px;
+	height: 2.694px;
+	left: 16.871px;
+	top: 24.208px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_127_Class {
+	fill: rgba(17,18,19,1);
+}
+.Path_127 {
+	overflow: visible;
+	position: absolute;
+	width: 24.381px;
+	height: 5.954px;
+	left: 7.995px;
+	top: 27.689px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Color_Overlay_hl_Class {
+	fill: rgba(17,18,19,1);
+}
+.Color_Overlay_hl {
+	overflow: visible;
+	position: absolute;
+	width: 40px;
+	height: 34px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Team_SwiFT_hm_Class {
+	left: 53.988px;
+	top: 8.484px;
+	position: absolute;
+	overflow: visible;
+	width: 131px;
+	white-space: nowrap;
+	line-height: 20px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.hashtagswift_Class {
+	transform: translate(0.377px, 0.324px) matrix(1,0,0,1,56.8043,28.3719) rotate(0deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 61px;
+	white-space: nowrap;
+	line-height: 8px;
+	margin-top: -0.5px;
+	text-align: center;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 7px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Username_Class {
+	left: 23.529px;
+	top: 99.902px;
+	position: absolute;
+	overflow: visible;
+	width: 95px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.age_00_Class {
+	left: 155.034px;
+	top: 99.902px;
+	position: absolute;
+	overflow: visible;
+	width: 37px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.freestylecompetitive_type_here_Class {
+	left: 23.529px;
+	top: 163.902px;
+	position: absolute;
+	overflow: visible;
+	width: 228px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Links_to_your_clips_type_here_Class {
+	left: 23.529px;
+	top: 291.531px;
+	position: absolute;
+	overflow: visible;
+	width: 198px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.why_do_you_want_to_join_type_h_Class {
+	left: 23.529px;
+	top: 227.716px;
+	position: absolute;
+	overflow: visible;
+	width: 253px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_24__1_Class {
+	position: absolute;
+	width: 145px;
+	height: 24px;
+	left: 23.529px;
+	top: 121.088px;
+	overflow: visible;
+}
+.type_here_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 146px;
+	white-space: nowrap;
+	line-height: 28.143590927124023px;
+	margin-top: -3.0590858459472656px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22.025419235229492px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Rectangle_4_Class {
+	fill: rgba(13,13,13,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 1366px;
+	height: 484px;
+	left: 0px;
+	top: 3367px;
+}
+.Footer__Class {
+	position: absolute;
+	width: 1060px;
+	height: 243.624px;
+	left: 153px;
+	top: 3416.657px;
+	overflow: visible;
+}
+.Socials_Class {
+	position: absolute;
+	width: 201.744px;
+	height: 27.597px;
+	left: 440px;
+	top: 185.564px;
+	overflow: visible;
+}
+.Socials2_Class {
+	position: absolute;
+	width: 201.744px;
+	height: 27.597px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Logo__FIXED_Class {
+	mix-blend-mode: normal;
+	position: absolute;
+	width: 24.037px;
+	height: 19.518px;
+	left: 0px;
+	top: 3.706px;
+	overflow: visible;
+}
+.Logo__FIXED_h_Class {
+	fill: rgba(255,255,255,1);
+}
+.Logo__FIXED_h {
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.302));
+	overflow: visible;
+	position: absolute;
+	width: 99.037px;
+	height: 94.518px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Shape_2_Class {
+	position: absolute;
+	width: 23.655px;
+	height: 27.597px;
+	left: 59px;
+	top: 0px;
+	overflow: visible;
+}
+.Shape_2_h_Class {
+	fill: rgba(255,255,255,1);
+}
+.Shape_2_h {
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.302));
+	overflow: visible;
+	position: absolute;
+	width: 98.655px;
+	height: 102.597px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Gradient_Class {
+	position: absolute;
+	width: 23.256px;
+	height: 23.256px;
+	left: 118px;
+	top: 1.5px;
+	overflow: visible;
+}
+.vectorMask_Class {
+	fill: rgba(255,255,255,1);
+}
+.vectorMask {
+	overflow: visible;
+	position: absolute;
+	width: 23.256px;
+	height: 23.256px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Shape_1_Class {
+	position: absolute;
+	width: 27.744px;
+	height: 19.665px;
+	left: 174px;
+	top: 3.706px;
+	overflow: visible;
+}
+.Shape_1_h_Class {
+	fill: rgba(255,255,255,1);
+}
+.Shape_1_h {
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.302));
+	overflow: visible;
+	position: absolute;
+	width: 102.744px;
+	height: 94.665px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Sign_h_Class {
+	position: absolute;
+	width: 160.086px;
+	height: 17.254px;
+	left: 462.579px;
+	top: 226.369px;
+	overflow: visible;
+}
+.Sign2_Class {
+	position: absolute;
+	width: 160.086px;
+	height: 17.254px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.SwiFT_Logo_copy_2_h_Class {
+	position: absolute;
+	width: 20.255px;
+	height: 17.254px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_20_ia_Class {
+	position: absolute;
+	width: 20.255px;
+	height: 17.254px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_138_ib_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_138_ib {
+	overflow: visible;
+	position: absolute;
+	width: 5.116px;
+	height: 3.685px;
+	left: 4.435px;
+	top: 2.096px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_139_ic_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_139_ic {
+	overflow: visible;
+	position: absolute;
+	width: 3.187px;
+	height: 4.726px;
+	left: 1.768px;
+	top: 9.089px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_140_id_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_140_id {
+	overflow: visible;
+	position: absolute;
+	width: 3.389px;
+	height: 3.167px;
+	left: 8.433px;
+	top: 2.416px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_141_ie_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_141_ie {
+	overflow: visible;
+	position: absolute;
+	width: 16.172px;
+	height: 6.454px;
+	left: 2.042px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_142_if_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_142_if {
+	overflow: visible;
+	position: absolute;
+	width: 12.679px;
+	height: 6.274px;
+	left: 3.788px;
+	top: 9.023px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_143_ig_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_143_ig {
+	overflow: visible;
+	position: absolute;
+	width: 5.116px;
+	height: 3.685px;
+	left: 10.704px;
+	top: 2.096px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_144_ih_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_144_ih {
+	overflow: visible;
+	position: absolute;
+	width: 3.187px;
+	height: 4.726px;
+	left: 15.301px;
+	top: 9.089px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_145_ii_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_145_ii {
+	overflow: visible;
+	position: absolute;
+	width: 20.255px;
+	height: 6.701px;
+	left: 0px;
+	top: 5.588px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_146_ij_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_146_ij {
+	overflow: visible;
+	position: absolute;
+	width: 3.326px;
+	height: 1.382px;
+	left: 8.464px;
+	top: 12.415px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_147_ik_Class {
+	fill: rgba(36,36,36,1);
+}
+.Path_147_ik {
+	overflow: visible;
+	position: absolute;
+	width: 12.232px;
+	height: 3.054px;
+	left: 4.011px;
+	top: 14.201px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.TEAM_sWIfT_EST_2017_il_Class {
+	left: 28.086px;
+	top: 0.527px;
+	position: absolute;
+	overflow: visible;
+	width: 133px;
+	white-space: nowrap;
+	line-height: 14px;
+	margin-top: -1px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(36,36,36,1);
+	letter-spacing: -0.25px;
+}
+.Color_Overlay_im_Class {
+	fill: rgba(222,248,0,1);
+}
+.Color_Overlay_im {
+	overflow: visible;
+	position: absolute;
+	width: 27.305px;
+	height: 22.793px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.swiftname_Class {
+	left: 47.32px;
+	top: 0.6px;
+	position: absolute;
+	overflow: visible;
+	width: 151px;
+	white-space: nowrap;
+	line-height: 19.263986587524414px;
+	margin-top: -1.0469579696655273px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17.17007064819336px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Language_Class {
+	position: absolute;
+	width: 22px;
+	height: 124px;
+	left: 1038px;
+	top: 37.897px;
+	overflow: visible;
+}
+.ES_Flag_Class {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 102px;
+	overflow: visible;
+}
+.Ellipse_5_Class {
+	fill: rgba(13,13,13,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0.5px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Ellipse_5 {
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_4_Class {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 2px;
+	top: 2px;
+	overflow: visible;
+}
+.NL_Flag_Class {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 68px;
+	overflow: visible;
+}
+.Ellipse_5_it_Class {
+	fill: rgba(13,13,13,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0.5px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Ellipse_5_it {
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_2_Class {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 2px;
+	top: 2px;
+	overflow: visible;
+}
+.RU_Flag_Class {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 34px;
+	overflow: visible;
+}
+.Ellipse_7_Class {
+	fill: rgba(13,13,13,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0.5px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Ellipse_7 {
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_3_Class {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 2px;
+	top: 2px;
+	overflow: visible;
+}
+.US_Flag_Class {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_1_Class {
+	fill: rgba(13,13,13,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0.5px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Ellipse_1 {
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_1_Class {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 2px;
+	top: 2px;
+	overflow: visible;
+}
+.Group_24_Class {
+	position: absolute;
+	width: 111px;
+	height: 115px;
+	left: 1px;
+	top: 42.343px;
+	overflow: visible;
+}
+.Component_1__2_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Component_5__1_i_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Component_6__1_i_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Home_i_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.020000457763672px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_2__2_Class {
+	position: absolute;
+	width: 49px;
+	height: 17px;
+	left: 0px;
+	top: 32px;
+	overflow: visible;
+}
+.Component_22__1_i_Class {
+	position: absolute;
+	width: 49px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.About_i_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 50px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_15__2_Class {
+	position: absolute;
+	width: 59px;
+	height: 17px;
+	left: 0px;
+	top: 65px;
+	overflow: visible;
+}
+.Roster_ja_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 60px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.Component_11__3_Class {
+	position: absolute;
+	width: 111px;
+	height: 17px;
+	left: 0px;
+	top: 98px;
+	overflow: visible;
+}
+.Applications_jc_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	white-space: nowrap;
+	line-height: 15.619636535644531px;
+	margin-top: -1.301638126373291px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.01636028289795px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2px;
+}
+.About_page_Class {
+	position: absolute;
+	width: 1038.506px;
+	height: 253.931px;
+	left: 163.747px;
+	top: 982.069px;
+	overflow: visible;
+}
+.SwiFT_Logo_copy_3_Class {
+	position: absolute;
+	width: 235px;
+	height: 196px;
+	left: 0px;
+	top: 57.931px;
+	overflow: visible;
+}
+.SwiFT_Logo_copy_3_jf_Class {
+	transform: translate(-164px, -1054px) matrix(1,0,0,1,164,1053.9999) rotate(0deg);
+	transform-origin: center;
+	position: absolute;
+	width: 235px;
+	height: 196px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_14_Class {
+	position: absolute;
+	width: 235px;
+	height: 196px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_78_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_78 {
+	overflow: visible;
+	position: absolute;
+	width: 59.361px;
+	height: 41.857px;
+	left: 51.458px;
+	top: 23.807px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_79_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_79 {
+	overflow: visible;
+	position: absolute;
+	width: 36.977px;
+	height: 53.684px;
+	left: 20.507px;
+	top: 103.247px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_80_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_80 {
+	overflow: visible;
+	position: absolute;
+	width: 39.316px;
+	height: 35.979px;
+	left: 97.842px;
+	top: 27.438px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_81_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_81 {
+	overflow: visible;
+	position: absolute;
+	width: 187.628px;
+	height: 73.311px;
+	left: 23.686px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_82_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_82 {
+	overflow: visible;
+	position: absolute;
+	width: 147.101px;
+	height: 71.266px;
+	left: 43.949px;
+	top: 102.502px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_83_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_83 {
+	overflow: visible;
+	position: absolute;
+	width: 59.361px;
+	height: 41.857px;
+	left: 124.182px;
+	top: 23.807px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_84_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_84 {
+	overflow: visible;
+	position: absolute;
+	width: 36.977px;
+	height: 53.684px;
+	left: 177.516px;
+	top: 103.247px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_85_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_85 {
+	overflow: visible;
+	position: absolute;
+	width: 235px;
+	height: 76.126px;
+	left: 0px;
+	top: 63.474px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_86_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_86 {
+	overflow: visible;
+	position: absolute;
+	width: 38.592px;
+	height: 15.697px;
+	left: 98.204px;
+	top: 141.03px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_87_Class {
+	fill: rgba(0,0,0,1);
+}
+.Path_87 {
+	overflow: visible;
+	position: absolute;
+	width: 141.922px;
+	height: 34.687px;
+	left: 46.539px;
+	top: 161.314px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Color_Overlay_jr_Class {
+	fill: rgba(0,0,0,1);
+}
+.Color_Overlay_jr {
+	overflow: visible;
+	position: absolute;
+	width: 235px;
+	height: 195.999px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.about_us_Class {
+	mix-blend-mode: difference;
+	left: 276px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 239px;
+	white-space: nowrap;
+	line-height: 47.330562591552734px;
+	margin-top: -3.944211959838867px;
+	text-align: center;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 39.442138671875px;
+	color: rgba(222,248,0,1);
+	letter-spacing: 2px;
+}
+.About_us_text_Class {
+	left: 276.062px;
+	top: 53.931px;
+	position: absolute;
+	overflow: visible;
+	width: 520px;
+	white-space: nowrap;
+	line-height: 19px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Arame, arame, regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(0,0,0,1);
+	letter-spacing: 1px;
+}
+.Socials_ju_Class {
+	position: absolute;
+	width: 26.506px;
+	height: 189.705px;
+	left: 1012px;
+	top: 53.931px;
+	overflow: visible;
+}
+.Socials_jv_Class {
+	position: absolute;
+	width: 26.506px;
+	height: 189.705px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Logo__FIXED_jw_Class {
+	mix-blend-mode: normal;
+	position: absolute;
+	width: 25.944px;
+	height: 21.067px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Logo__FIXED_jx_Class {
+	fill: rgba(8,9,10,1);
+}
+.Logo__FIXED_jx {
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.302));
+	overflow: visible;
+	position: absolute;
+	width: 100.944px;
+	height: 96.067px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Shape_2_jy_Class {
+	position: absolute;
+	width: 25.532px;
+	height: 29.787px;
+	left: 0.974px;
+	top: 53.588px;
+	overflow: visible;
+}
+.Shape_2_jz_Class {
+	fill: rgba(8,9,10,1);
+}
+.Shape_2_jz {
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.302));
+	overflow: visible;
+	position: absolute;
+	width: 100.532px;
+	height: 104.787px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Gradient_j_Class {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 1.302px;
+	top: 115px;
+	overflow: visible;
+}
+.vectorMask_j_Class {
+	fill: rgba(8,9,10,1);
+}
+.vectorMask_j {
+	overflow: visible;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Shape_1_j_Class {
+	position: absolute;
+	width: 25.945px;
+	height: 18.225px;
+	left: 0px;
+	top: 171.48px;
+	overflow: visible;
+}
+.Shape_1_ka_Class {
+	fill: rgba(8,9,10,1);
+}
+.Shape_1_ka {
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.302));
+	overflow: visible;
+	position: absolute;
+	width: 100.945px;
+	height: 93.225px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
